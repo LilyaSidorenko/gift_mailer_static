@@ -1,9 +1,9 @@
 //Base
-@import "base/reset";
 @import "base/variables";
-
 @import "base/mixins";
 @import "base/base";
+@import "base/reset";
+
 @import "base/text";
 @import "base/link";
 
@@ -18,8 +18,12 @@
 // Blocks
 
 @import "blocks/form";
+@import "blocks/header";
+@import "blocks/logo";
+@import "blocks/ask-block";
+@import "blocks/preview";
 
 //UI
 @import "ui/btn";
+@import "ui/btn-share";
 @import "ui/checkbox";
-@import "ui/checkobox-radio";

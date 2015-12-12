@@ -38,7 +38,7 @@
     }
 }
 
-@each $font-face in HelveticaMedium {
+@each $font-face in ComfortaaRegular, ComfortaaBold, OpenSansRegular {
     @font-face {
         font-family: $font-face; font-style: normal; font-weight: normal;
         src: url('../../src/fonts/#{$font-face}.eot');

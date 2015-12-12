@@ -11,10 +11,8 @@ body {
     font-family: $font-default;
     line-height: $line-height;
 
-    background-color: $yellow_regular;
-    background-size: cover;
-
     -webkit-font-smoothing: antialiased;
+    background-color: $grey_light;
 }
 h1,
 h2,
