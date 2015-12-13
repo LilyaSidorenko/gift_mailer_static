@@ -65,5 +65,58 @@ html
                         p.preview__text Твой друг получает самый лучший новогодний подарок!
 
 
+        .form-wrap
+
+            .g-central-block
+                h3.form__title Узнай что хотят твои друзья
+                    br
+                    | в подарок на Новый год
+                form.form(action='/')
+                    .form__row
+                        .form__col.form__col--full-width
+                            label.form__label(for='your_email') Твой E-mail
+                            input.form__input(id='your_email', type='email')
+                    .js-tpl-container
+                        .form__row
+
+                            .form__col.form__col--50
+                                label.form__label(for='friend_name')  Имя друга
+                                input.form__input(id='friend_name', type='email')
+
+                            .form__col.form__col--50
+                                label.form__label(for='friend_email') E-mail друга
+                                input.form__input(id='friend_email', type='text')
+
+
+                    a(href='#', data-copy-tpl="#form-tpl").form__clone-tpl.js-trigger-clone-tpl Добавить еще друга
+
+                    script#form-tpl(type='text/x-template').
+                        <div class="form__row">
+                        <span class="btn-remove js-remove-tpl"></span>
+                        <div class="form__col form__col--50">
+                        <label for="friend_name" class="form__label"> Имя друга</label>
+                        <input id="friend_name" type="email" class="form__input"/>
+                        </div>
+                        <div class="form__col form__col--50">
+                        <label for="friend_email" class="form__label">E-mail друга</label>
+                        <input id="friend_email" type="text" class="form__input"/>
+                        </div></div>
+
+                    button.btn Отправить
+
+        include elements/footer
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

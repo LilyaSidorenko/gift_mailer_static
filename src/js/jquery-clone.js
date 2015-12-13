@@ -1,21 +1,23 @@
 'use strict';
 
-(function($) {
+(function ($) {
     var defaults = {
         "trigger": ".js-trigger-clone-tpl",
         "insertInСontainer": ".js-tpl-container",
         "remove": ".js-remove-tpl"
     };
 
-    CloneTpl = function(options) {
+    var CloneTpl = function (options) {
         this.options = $.extend({}, defaults, options || {});
 
         this.$trigger = $(this.options.trigger);
 
         this.cloneTplId = this.$trigger.data('copy-tpl');
 
-        this.clonedCallback = function(options) {};
-        this.removeCallback = function(options) {};
+        this.clonedCallback = function (options) {
+        };
+        this.removeCallback = function (options) {
+        };
 
         if (this.cloneTplId) {
             this.init();
@@ -23,13 +25,13 @@
     };
 
     CloneTpl.prototype = {
-        init: function() {
+        init: function () {
             this.initEvents();
         },
-        initEvents: function() {
+        initEvents: function () {
             var self = this;
 
-            this.$trigger.on('click', function(e) {
+            this.$trigger.on('click', function (e) {
                 e.preventDefault();
 
                 self.clone();
@@ -39,7 +41,7 @@
 
             });
 
-            $('body').on('click', this.options.remove, function(e) {
+            $('body').on('click', this.options.remove, function (e) {
                 e.preventDefault();
 
                 $(this)
@@ -49,9 +51,14 @@
                 self.removeCallback(self.options);
             })
         },
-        clone: function() {
+        clone: function () {
             $(this.options.insertInСontainer).append($(this.cloneTplId).html());
 
         }
     };
+    $(document).ready(function () {
+        new CloneTpl();
+    });
+
+
 })(jQuery);
