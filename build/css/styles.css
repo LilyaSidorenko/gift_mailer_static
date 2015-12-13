@@ -1,7 +1,7 @@
 .link:hover, .form__clone-tpl:hover, .btn:hover {
   transition: all 150ms linear; }
 
-.form__input {
+.form__input, .form__textarea {
   transition: all .3s linear; }
 
 @font-face {
@@ -297,7 +297,8 @@ table {
   .form-wrap {
     padding: 90px 0;
     background: url("../../src/images/form__bg.png") top center no-repeat;
-    background-size: cover; }
+    background-size: cover;
+    box-shadow: 2px 2px 9px -1px rgba(0, 0, 0, 0.18); }
   .form__title {
     font-family: ComfortaaBold, serif;
     font-size: 55px;
@@ -323,8 +324,15 @@ table {
       margin-right: 6%; }
       .form__col--50:last-child {
         margin-right: 0; }
+    .form__col--33 {
+      width: 29%;
+      margin-right: 6%; }
+      .form__col--33:last-child {
+        margin-right: 0; }
   .form__label {
-    line-height: 2;
+    display: inline-block;
+    margin-bottom: 20px;
+    line-height: 1.3;
     font-size: 17px;
     color: #9e9e9e; }
   .form__input {
@@ -337,13 +345,24 @@ table {
     border-bottom: 3px solid rgba(6, 102, 65, 0.8); }
     .form__input:focus {
       border-bottom-color: #066641; }
+  .form__textarea {
+    width: 100%;
+    padding: 15px;
+    font-family: sans-serif;
+    font-size: 22px;
+    color: #000000;
+    background: transparent;
+    border: 3px solid rgba(6, 102, 65, 0.8);
+    border-radius: 6px; }
+    .form__textarea:focus {
+      border-color: #066641; }
   .form__clone-tpl {
     display: block;
     margin-bottom: 40px;
     text-align: left;
     text-decoration: none;
     color: #000000;
-    font-size: 35px; }
+    font-size: 30px; }
     .form__clone-tpl:hover {
       opacity: 0.7; }
     .form__clone-tpl:before {
@@ -428,6 +447,7 @@ table {
       margin-top: 200px; }
   .preview__step {
     margin: 10px auto;
+    padding: 0 10px;
     width: 450px; }
   .preview__img {
     margin: 15px 0; }
@@ -445,6 +465,13 @@ table {
     margin: 30px 0; }
     .preview__step-wrap:nth-child(odd) {
       margin-top: 0; } }
+
+.footer {
+  padding: 40px 0;
+  text-align: center;
+  color: #fff;
+  color: rgba(225, 225, 225, 0.7);
+  background-color: #68192e; }
 
 .btn {
   padding: 15px 30px;

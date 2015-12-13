@@ -1,0 +1,80 @@
+doctype html
+html
+    include elements/head
+    body
+        .header
+            img.header__img(src='../../src/images/page-header.png')
+            .logo
+                img.logo__img(src='../../src/images/logo.svg' width='70')
+                span.logo__text Gift Mailer
+        .ask-block
+            .g-central-block
+                h3.ask-block__title Узнай что хотят твои друзья
+                    br
+                    | в подарок на Новый год
+                button.btn Заполни форму
+                .ask-block__btn-wrap
+                    button.btn-share
+        .g-central-block
+            .preview
+                .preview__title Как это работает?
+                .preview__step-wrap
+                    .preview__step.preview__step--l.preview__step--first
+                        .preview__sub-title Шаг 1
+                        img.preview__img(src='../../src/images/preview/preview__step_1.svg', width='230')
+                        p.preview__text Введи email адреса друзей, которым ты хочешь подарить подарок
+                    .preview__anim
+                        //img(src='../../src/images/preview/preview__anim_1.svg', width='150')
+                .preview__step-wrap
+                    .preview__step.preview__step--r.preview__step--first
+                        .preview__sub-title Шаг 2
+                        img.preview__img(src='../../src/images/preview/preview__step_2.svg', width='300')
+                        p.preview__text Друг получают анонимное письмо о том, что кто-то интересуется новогодним подарком, который он хочет получить
+                    .preview__anim
+                        //img(src='../../src/images/preview/preview__anim_2.svg', width='150')
+                .preview__step-wrap
+                    .preview__step.preview__step--l.preview__step--first
+                        .preview__sub-title Шаг 3
+                        img.preview__img(src='../../src/images/preview/preview__step_3.svg', width='230')
+                        p.preview__text Друг заполняет форму, со своими пожеланиями
+                    .preview__anim
+                        //img(src='../../src/images/preview/preview__anim_1.svg', width='150')
+                .preview__step-wrap
+                    .preview__step.preview__step--r.preview__step--first
+                        .preview__sub-title Шаг 4
+                        img.preview__img(src='../../src/images/preview/preview__step_4.svg', width='250')
+                        p.preview__text Пожелания твоего друга приходят прямо к тебе на почту!
+                    .preview__anim
+                        //img(src='../../src/images/preview/preview__anim_4.svg', width='150')
+                .preview__step-wrap
+                    .preview__step.preview__step--l.preview__step--first
+                        .preview__sub-title Шаг 5
+                        img.preview__img(src='../../src/images/preview/preview__step_5.svg', width='400')
+                        p.preview__text Твой друг получает самый лучший новогодний подарок!
+        .form-wrap
+            .g-central-block
+                h3.form__title Расскажи своему другу, что ты хочешь получить
+                    br
+                    | в подарок на Новый год
+                form.form(action='/')
+                    .form__row
+
+                        label.form__label Здесь ты можешь ввести желаемые подарки: (Советуем указывать подарки из разных ценовых категорий)
+                        .form__col.form__col--33
+                            input.form__input(type='text')
+                        .form__col.form__col--33
+                            input.form__input(type='text')
+                        .form__col.form__col--33
+                            input.form__input(type='text')
+                    .form__row
+                        .form__col.form__col--full-width
+                            label.form__label Если ты не знаешь, что конкретно тебе подарить, то расскажи о своих увлечениях, хобби: (Твоему другу будет проще подобрать тебе подарок)
+                            textarea.form__textarea(rows='3')
+                    .form__row
+                        .form__col.form__col--full-width
+                            label.form__label А здесь - ты можешь отправить свои пожелания своему будущему поздравителю :)
+                            textarea.form__textarea(rows='3')
+
+
+                    button.btn Отправить
+        include elements/footer
