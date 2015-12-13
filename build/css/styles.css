@@ -395,9 +395,15 @@ table {
 
 .header {
   position: relative;
-  width: 100%; }
+  width: 100%;
+  text-align: center; }
   .header__img {
     max-width: 100%; }
+  .header__arrow {
+    position: relative;
+    margin: 0 auto;
+    bottom: 70px;
+    opacity: 0.8; }
 
 .logo {
   position: absolute;
@@ -446,6 +452,7 @@ table {
     text-transform: uppercase;
     color: #000000; }
   .preview__step-wrap {
+    position: relative;
     display: inline-block;
     vertical-align: top;
     width: 50%;
@@ -465,15 +472,19 @@ table {
   .preview__text {
     font-size: 25px;
     text-align: left; }
-
-@media (min-width: 0) and (max-width: 730px) {
-  .preview__title {
-    font-size: 25px; }
-  .preview__step-wrap {
-    width: 100%;
-    margin: 30px 0; }
-    .preview__step-wrap:nth-child(odd) {
-      margin-top: 0; } }
+  .preview__anim-l {
+    position: absolute;
+    right: 100%;
+    bottom: 0;
+    transform: rotate(-63deg); }
+    .preview__anim-l:last-child {
+      right: 50%;
+      top: 100%; }
+  .preview__anim-r {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: scaleX(-1) rotate(-63deg); }
 
 .footer {
   padding: 40px 0;

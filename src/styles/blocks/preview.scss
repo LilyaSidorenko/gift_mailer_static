@@ -19,6 +19,8 @@
   }
 
   &__step-wrap {
+    position: relative;
+
     display: inline-block;
     vertical-align: top;
     width: 50%;
@@ -48,22 +50,25 @@
     font-size: 25px;
     text-align: left;
   }
-}
+  &__anim-l {
+    position: absolute;
+    right: 100%;
+    bottom: 0;
+    transform: rotate(-63deg);
 
-@include media-breakpoint('phone') {
-  .preview {
-
-    &__title {
-      font-size: 25px;
+    &:last-child {
+      right: 50%;
+      top: 100%;
     }
 
-    &__step-wrap {
-      width: 100%;
-      margin: 30px 0;
-
-      &:nth-child(odd) {
-        margin-top: 0;
-      }
-    }
   }
+  &__anim-r{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: scaleX(-1) rotate(-63deg);
+
+
+  }
+
 }

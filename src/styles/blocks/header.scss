@@ -1,8 +1,15 @@
 .header {
   position: relative;
   width: 100%;
+  text-align: center;
 
   &__img {
     max-width: 100%;
+  }
+  &__arrow {
+    position: relative;
+    margin: 0 auto;
+    bottom: 70px;
+    opacity: 0.8;
   }
 }
