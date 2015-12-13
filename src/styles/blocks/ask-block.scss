@@ -1,7 +1,6 @@
 .ask-block {
   position: relative;
 
-  margin-bottom: 90px;
   padding: 90px 0;
 
   text-align: center;
@@ -20,5 +19,16 @@
     right: 5%;
     bottom: 100%;
     margin-bottom: - 28px; //Button height
+  }
+}
+
+@include media-breakpoint('phone') {
+  .ask-block {
+    padding: 40px 0;
+
+    &__title {
+      font-size: 25px;
+      padding-bottom: 20px;
+    }
   }
 }

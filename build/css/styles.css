@@ -408,7 +408,6 @@ table {
 
 .ask-block {
   position: relative;
-  margin-bottom: 90px;
   padding: 90px 0;
   text-align: center;
   background: url("../../src/images/ask-block__bg.png") top center no-repeat;
@@ -425,7 +424,15 @@ table {
     bottom: 100%;
     margin-bottom: -28px; }
 
+@media (min-width: 0) and (max-width: 730px) {
+  .ask-block {
+    padding: 40px 0; }
+    .ask-block__title {
+      font-size: 25px;
+      padding-bottom: 20px; } }
+
 .preview {
+  margin-top: 90px;
   margin-bottom: 50px;
   text-align: center;
   line-height: 1.4; }
@@ -448,7 +455,7 @@ table {
   .preview__step {
     margin: 10px auto;
     padding: 0 10px;
-    width: 450px; }
+    max-width: 450px; }
   .preview__img {
     margin: 15px 0; }
   .preview__sub-title {
@@ -460,6 +467,8 @@ table {
     text-align: left; }
 
 @media (min-width: 0) and (max-width: 730px) {
+  .preview__title {
+    font-size: 25px; }
   .preview__step-wrap {
     width: 100%;
     margin: 30px 0; }

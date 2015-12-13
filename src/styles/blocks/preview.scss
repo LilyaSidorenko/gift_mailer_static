@@ -1,4 +1,6 @@
 .preview {
+  margin-top: 90px;
+
   margin-bottom: 50px;
 
   text-align: center;
@@ -30,7 +32,7 @@
   &__step {
     margin: 10px auto;
     padding: 0 10px;
-    width: 450px;
+    max-width: 450px;
 
   }
   &__img {
@@ -50,6 +52,10 @@
 
 @include media-breakpoint('phone') {
   .preview {
+
+    &__title {
+      font-size: 25px;
+    }
 
     &__step-wrap {
       width: 100%;
